@@ -50,7 +50,7 @@ Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login_
 		response.getWriter().append("<font color='red' size='20'>Login Failed!!</font><br>");
 
 		
-		response.getWriter().append("<a href='login_page.html' style='font-size = 20px;'>TRY AGAIN</a>");
+		response.getWriter().append("<a href='index.html' style='font-size = 20px;'>TRY AGAIN</a>");
 
 	}
 	
