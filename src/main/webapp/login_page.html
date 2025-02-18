@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <style>
+        h1 {
+            display: flex;
+            justify-content: center;
+            color: white;
+            background-color: red;
+            margin-left: auto;
+            margin-right: auto;
+            width: 32.6%;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .Login-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .input_1, .input_2 {
+            color: black;
+            padding-left: 60px;
+        }
+
+        .input_3 {
+            margin-left: 150px;
+        }
+
+        .f1 {
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
+            color: white;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+           
+        }
+
+        .f1:hover {
+            transform: scale(1.1);
+            transition: 0.3s ease-in-out;
+        }
+
+        .input_3:hover {
+            background-color: grey;
+        }
+
+        .input_4:hover {
+            background-color: #007BFF;
+        }
+
+        /* === Responsive Design === */
+        @media (max-width: 768px) {
+            h1 {
+                width: 70%;
+                font-size: 22px;
+            }
+
+            .Login-form {
+                flex-direction: column;
+            }
+
+            fieldset {
+                width: 90%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .input_1, .input_2 {
+                padding-left: 10px;
+            }
+
+            .input_3 {
+                margin-left: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            .input_4 {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px;
+                padding: 5px;
+            }
+
+            fieldset {
+                width: 100%;
+                padding: 15px;
+            }
+
+            input {
+                width: 100%;
+                padding: 8px;
+                margin: 5px 0;
+            }
+
+            .input_3, .input_4 {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>  
+    <h1>Login Form</h1>
+
+    <form action="Login_Servlet" method="post" class="Login-form">
+        <fieldset class="f1" style="width: 450px; height: auto;">
+            <label class="input_1">Enter Name: </label>   
+            <input type="text" name="text_name" placeholder="Enter your name"> <br><br>
+
+            <label class="input_2">Enter Password: </label> 
+            <input type="password" name="password" placeholder="Enter your password"> <br><br>
+
+            <input class="input_3" type="submit" value="Login">
+            <input class="input_4" type="reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
+</html>
